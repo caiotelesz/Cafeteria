@@ -27,6 +27,7 @@ section {
   max-width: 1200px;
 }
 
+/* Cabeçalho */
 .header {
   position: fixed;
   top: 0;
@@ -68,7 +69,58 @@ section {
   height: 40px;
 }
 
-/* botão da page */
+/* Cabeçalho mobile */
+.menu-mobile {
+  background-color: var(--bg);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 0%;
+  overflow: hidden;
+}
+
+.menu-mobile.menu-open{
+  width: 50%;
+}
+
+.menu-mobile.menu-open ~ .overlay-menu{
+  display: block;
+}
+
+.menu-mobile nav a {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 20px 8%;
+}
+
+.menu-mobile nav a:hover {
+  background-color: var(--main-color);
+ }
+
+ .menu-mobile .btn-fechar {
+  padding: 20px 5%;
+ }
+
+ .overlay-menu {
+  background-color: var(--bg);
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8888;
+  display: none;
+ }
+
+ /* botão da page */
 .btn {
   background: var(--main-color);
   color: #fff;
@@ -80,11 +132,11 @@ section {
 }
 
 .btn:hover {
+  background: var(--main-color);
   letter-spacing: 0.1rem;
 }
 
 /* home */
-
 .container-home {
   background: url("https://i.ibb.co/KX8pvpC/home-img.jpg");
   background-position: center;
@@ -166,50 +218,56 @@ color: #fff;
   gap: 1.5rem;
 }
 
-.container-menu .card-container .card {
+.container-menu .card-container .card-coffe {
   text-align: center;
   border: var(--border);
   padding: 5rem;
   cursor: pointer;
 }
 
-.container-menu .card-container .card:hover {
+.container-menu .card-container .card-coffe:hover {
   background-color: #fff;
 }
 
-.container-menu .card-container .card h3, .price {
+.container-menu .card-container .card-coffe h3, .price {
   color: #fff;
 }
 
-.container-menu .card-container .card h3 {
+.container-menu .card-container .card-coffe h3 {
   font-size: 2rem;
   padding: 1rem 0;
 }
 
+.card-coffe h4 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: #fff;
+}
 
-.container-menu .card-container .card .price {
+
+.container-menu .card-container .card-coffe .price {
   font-size: 2.5rem;
   padding: 0.5rem 0;
 }
 
-.container-menu .card-container .card span {
+.container-menu .card-container .card-coffe span {
   font-size: 1.5rem;
   text-decoration: line-through;
   font-weight: lighter;
 }
 
-.container-menu .card-container .card:hover>* {
+.container-menu .card-container .card-coffe:hover>* {
   color: var(--black);
 }
 
 /* Avaliações */
-.container-review .card-container .card {
+.container-review .card-container .card-coffe {
   border: var(--border);
   text-align: center;
   padding: 3rem 2rem;
 }
 
-.container-review .card-container .card p { 
+.container-review .card-container .card-coffe p { 
   font-size: 1.5rem;
   color: #fff;
   padding: 2rem 0;
@@ -217,7 +275,7 @@ color: #fff;
   font-weight: lighter;
 }
 
-.container-review .card-container .card .user { 
+.container-review .card-container .card-coffe .user { 
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
@@ -267,6 +325,10 @@ color: #fff;
 }
 
 /* Responsividade */
+@media screen and (min-width: 769px) {
+  .menu-mobile, .btn-abrir-menu { display: none; }
+}
+
 @media screen and (max-width: 935px) {
   .content h1 {
     font-size: 4rem;
@@ -285,12 +347,17 @@ color: #fff;
     text-align: center;
   }
 
-  .container-review .card-container .card p {
+  .container-review .card-container .card-coffe p {
     font-weight: 300;
    }
 }
 
 @media screen and (max-width: 768px) {
+
+  .content h1 {
+    font-size: 3.2rem;
+  }
+
   .navbar, .icons {
     display: none;
   }
@@ -300,7 +367,7 @@ color: #fff;
     font-weight: 300;
   }
 
-  .container-menu .card-container .card { 
+  .container-menu .card-container .card-coffe { 
     padding: 3.5rem;
   }
 
@@ -313,6 +380,16 @@ color: #fff;
   section {
     padding: 1.5rem;
   }
+  .header section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .header section a img{
+    width: 50px;
+    height: 40px;
+  }
+
   .content h1 {
     font-size: 2.5rem;
   }
@@ -350,24 +427,28 @@ color: #fff;
     margin-top: 0.5rem;
   }
 
-  .container-menu .card-container .card { 
+  .container-menu .card-container .card-coffe { 
     padding: 2rem;
   }
 
-  .container-menu .card-container .card h3 { 
+  .container-menu .card-container .card-coffe h3 { 
     font-size: 1.6rem;
     padding: 0.25rem 0;
   }
 
-  .container-menu .card-container .card .price {
+  .card-coffe h4 {
+    font-size: 1.3rem;
+  }
+
+  .container-menu .card-container .card-coffe .price {
     font-size: 2rem;
    } 
 
-  .container-review .card-container .card {
+  .container-review .card-container .card-coffe {
     padding: 2rem 1.5rem;
   }
 
-  .container-review .card-container .card p {
+  .container-review .card-container .card-coffe p {
     font-size: 1.2rem;
     line-height: 1.2;
   }
