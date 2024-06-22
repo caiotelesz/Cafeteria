@@ -14,7 +14,7 @@ Bem-vindo ao projeto da Cafeteria! Este projeto foi desenvolvido com o objetivo 
 
 ### Instruções para Visualização do Projeto
 
-1. **Basta utilizar esse link:** https://cafeteria-ls3vefvnf-caioteleszs-projects.vercel.app/
+1. **Basta utilizar esse link:** https://cafeteria-lake.vercel.app/
 
 ### OU
 
