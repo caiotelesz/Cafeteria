@@ -88,7 +88,8 @@ section {
 .container-home {
   background: url("https://i.ibb.co/KX8pvpC/home-img.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .container-home section {
@@ -135,6 +136,11 @@ color: #fff;
   align-items: center;
   background-color: var(--black);
   gap: 1.5rem;
+}
+
+.container-about .line div img {
+  width: 100%;
+  height: 100%;
 }
 
 .container-about .line .content {
@@ -224,6 +230,12 @@ color: #fff;
   align-items: center;
 }
 
+.container-address iframe {
+  width: 100%;
+  max-width: 600px;
+  min-height: 450px;
+}
+
 /* footer */
 .footer {
   text-align: center;
@@ -252,4 +264,111 @@ color: #fff;
 ::-webkit-scrollbar-thumb {
   width: 15px;
   background-color: var(--main-color);
+}
+
+/* Responsividade */
+@media screen and (max-width: 935px) {
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .container-home section {
+    min-height: 60vh;
+  }
+
+  .container-about .line {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .content div {
+    text-align: center;
+  }
+
+  .container-review .card-container .card p {
+    font-weight: 300;
+   }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar, .icons {
+    display: none;
+  }
+
+  .content p {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+
+  .container-menu .card-container .card { 
+    padding: 3.5rem;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+  }
+ }
+
+@media screen and (max-width: 375px) {
+  section {
+    padding: 1.5rem;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .container-home section {
+    min-height: 50vh;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container-about .line .content h2 { 
+    font-size: 2rem;
+  }
+
+  .container-about .line .content p {
+    font-size: 1.3rem;
+    line-height: 1.2;
+   }
+
+  .container-address iframe { 
+    min-height: 250px;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .container-menu .card-container .card { 
+    padding: 2rem;
+  }
+
+  .container-menu .card-container .card h3 { 
+    font-size: 1.6rem;
+    padding: 0.25rem 0;
+  }
+
+  .container-menu .card-container .card .price {
+    font-size: 2rem;
+   } 
+
+  .container-review .card-container .card {
+    padding: 2rem 1.5rem;
+  }
+
+  .container-review .card-container .card p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
 }
