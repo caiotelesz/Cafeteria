@@ -20,7 +20,8 @@ Bem-vindo ao projeto da Cafeteria! Este projeto foi desenvolvido com o objetivo 
 
 3. **Clone o repositório**:
    ```sh
-   git clone <https://github.com/caiotelesz/Cafeteria.git>
+   git clone https://github.com/caiotelesz/Cafeteria.git
+   ```
 
 4. **Acesse o diretório do projeto**
 
