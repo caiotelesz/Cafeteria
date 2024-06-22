@@ -14,6 +14,10 @@ Bem-vindo ao projeto da Cafeteria! Este projeto foi desenvolvido com o objetivo 
 
 ### Instruções para Visualização do Projeto
 
+1. **Basta utilizar esse link:** https://cafeteria-ls3vefvnf-caioteleszs-projects.vercel.app/
+
+### OU
+
 1. **Crie uma pasta em desktop**
 
 2. **Utilizando o cmd vai até a pasta ou Abra o VSCode da pasta**
